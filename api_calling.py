@@ -26,7 +26,7 @@ def note_generator(images):
 
     try:
         response = client.models.generate_content(
-            model="gemini-3-flash",  # Using stable model name
+            model="gemini-3-flash-preview",  # Using stable model name
             contents=[images, prompt]
         )
         return response.text 
@@ -53,7 +53,7 @@ def quiz_generator(image,difficulty):
 
     try:
         response = client.models.generate_content(
-            model="gemini-3-flash",
+            model="gemini-3-flash-preview",
             contents=[image, prompt]
         )
         return response.text
